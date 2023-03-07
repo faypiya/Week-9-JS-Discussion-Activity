@@ -21,15 +21,19 @@
 
 		
 		// 1. Change the h1 element to your name.
-
+		document.querySelector("h1").innerHTML = "Fay";
+	
 
 
 		// 2. Update the three span elements using ONLY JavaScript
-
+		document.querySelector("#URL").innerHTML = window.location.href;
+		document.querySelector("#items").innerHTML = document.querySelectorAll("li").length
+		document.querySelector("#time").innerHTML = new Date()
 
 
 		// 3. Change the background color and margin for the entire page.
-	
+		document.body.style.backgroundColor = "pink";
+		document.body.style.margin = "20px";
 
 
     }
@@ -37,12 +41,15 @@
     // 4. If someone uses the keyboard shortcut to copy the words "University of Michigan" then add the words "Go Blue" to the final div.  
     // Each occurence should be on a separate line.  Don't use 
     // paragraphs. 
+	function copyFunction() {
+	 document.querySelector("#cheer").innerHTML += "</br>" + "Go Blue";
+	}
 
 		
 </script>
 
 </head>
-<body>
+<body onload = "displayInformation();">
 	<h1>Your name goes here</h1>
 
 	<ol>
